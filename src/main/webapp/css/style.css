@@ -2,6 +2,6 @@
     box-sizing: border-box;
 }
 
-nav ul {
-    display: flex;
+body {
+    background-color: lavender;
 }

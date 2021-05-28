@@ -17,7 +17,7 @@
 
 <html>
 <head>
-    <!-- Required meta tags -->
+    <%-- Required meta tags --%>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <!-- Bootstrap CSS -->
+    <%-- Bootstrap CSS --%>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <title>Login</title>
 
@@ -38,16 +38,16 @@
 
     <%-- This form should submit a POST request to /login.jsp --%>
     <form method="POST" action="login.jsp">
-        <div>
-            <label for="username">Username: </label>
-            <input type="text" id="username" name="username">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username">
         </div>
 
-        <div>
-            <label for="password">Password: </label>
-            <input type="password" id="password" name="password">
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
 
