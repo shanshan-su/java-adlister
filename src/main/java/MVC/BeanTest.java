@@ -12,16 +12,18 @@ public class BeanTest {
         album1.setSales(1.2);
         album1.setGenre("Fairy tales, legends, myths, tall tales, and fables");
 
+        System.out.printf("%s\n", album1.getGenre());
+
         Album album2 = new Album("Adele", "25");
         album2.setReleaseDate(2015);
-        album1.setSales(22);
-        album1.setGenre("Soul, pop, R&B");
+        album2.setSales(22);
+        album2.setGenre("Soul, pop, R&B");
 
         List<Album> albums = new ArrayList<>(Arrays.asList(album1, album2));
 
         System.out.printf(" %-10s | %-15s | %-12s | %-5s | %s\n", "Name", "Artist", "Release Year", "Sales", "Genre");
         for (Album album : albums) {
-            System.out.printf(" %-10s | %-15s | %-12s | %-5s | %s\n", album.getName(), album.getArtist(), album.getReleaseDate(), album.getSales(), album.getGenre());
+            System.out.printf(" %-10s | %-15s | %-12s | %-5.2f | %s\n", album.getName(), album.getArtist(), album.getReleaseDate(), album.getSales(), album.getGenre());
         }
 
 
