@@ -19,8 +19,10 @@ public class GuessServlet extends HttpServlet {
 
         if (number == randomNumber) {
             response.sendRedirect("/correct");
-        } else {
+        } else if(number >= 1 && number <= 3) {
             response.sendRedirect("/incorrect");
+        } else {
+            response.sendRedirect("/guess");
         }
 
 

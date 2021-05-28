@@ -14,8 +14,9 @@
 <body>
 <%@ include file="/partials/navbar.jsp" %>
 
-<h2>Guessing Game</h2>
+
 <form method="POST" action="/guess" class="m-5">
+    <h2 class="mb-3">Guessing Game</h2>
     <div class="mb-3">
         <p>Let's play a game. I'll write down a whole number between 1 and 3, after I finish you'll guess what number it is on the paper. Are you ready?</p>
         <p>Now it's your turn, please enter your number below.</p>
