@@ -3,14 +3,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String message = "Welcome to AdLister :)";
+        HttpSession session = request.getSession();
+        boolean isAdmin = (boolean) session.getAttribute("isAdmin");
 
-        request.setAttribute("message", message);
-        request.getRequestDispatcher("/homePage/profile.jsp").forward(request, response);
+        if (isAdmin) {
+
+        }
+
+        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
 }
