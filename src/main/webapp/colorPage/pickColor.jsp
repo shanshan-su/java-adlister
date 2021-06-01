@@ -14,7 +14,7 @@
 <body>
 <%@ include file="/partials/navbar.jsp" %>
 
-<form method="POST" action="/pickcolor">
+<form method="POST" action="/viewcolor">
     <h2>What's your favorite color?</h2>
     <div class="mb-3">
         <label for="color" class="form-label">Enter your favorite color</label>

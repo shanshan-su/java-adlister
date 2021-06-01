@@ -7,14 +7,12 @@ import java.io.IOException;
 
 @WebServlet(name = "ViewColorServlet", urlPatterns = "/viewcolor")
 public class ViewColorServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/pickcolor").forward(request, response);
-    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String color = request.getParameter("color");
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String color = (String) request.getAttribute("color");
+        // pass the value of the color variable to ViewColorServlet
         request.setAttribute("color", color);
-        response.sendRedirect("/colorPage/viewColor.jsp");
+        request.getRequestDispatcher("/colorPage/viewColor.jsp").forward(request, response);
     }
 
 }
