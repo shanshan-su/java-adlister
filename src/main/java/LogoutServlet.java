@@ -12,10 +12,8 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         if (session.getAttribute("user") == null) { // user has not logged in
-            String message = "Please login first.";
+            request.setAttribute("message", "Please login first.");
 
-            request.setAttribute("message", message);
-            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
 
 //        String user = (String) session.getAttribute("user");
@@ -25,9 +23,11 @@ public class LogoutServlet extends HttpServlet {
 
         if(session.getAttribute("user") == "admin") {
             session.invalidate();
-            response.sendRedirect("/login");
+            request.setAttribute("message", "You have logged out successfully.");
+
+//            response.sendRedirect("/login");
         }
 
-
+        request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 }
