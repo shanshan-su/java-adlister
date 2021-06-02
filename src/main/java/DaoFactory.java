@@ -1,10 +1,14 @@
-public class DaoFactory {
-    private static Ads adsDao;
+import java.io.IOException;
 
-    public static Ads getAdsDao() {
-        if (adsDao == null) {
-            adsDao = new ListAdsDao();
+public class DaoFactory {
+    private static Products productsDao;
+
+    public static Products getProductsDao() throws IOException {
+        if (productsDao == null) {
+            productsDao = new MySqlProductsDao(); //we can swap this implementation [List to CSV to MySQL to. . . .]
         }
-        return adsDao;
+        return productsDao;
     }
+
+
 }
