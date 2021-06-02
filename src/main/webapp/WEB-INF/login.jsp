@@ -6,7 +6,7 @@
     </jsp:include>
 </head>
 
-<% //In case, if user session equals admin, redirect to profile page
+<% // if user has logged in as admin (session equals admin), redirect to profile page
     if ((request.getSession().getAttribute("user") == "admin"))
     { %>
         <jsp:forward page="/WEB-INF/profile.jsp"></jsp:forward>
@@ -16,6 +16,7 @@
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
+        <h2>${message}</h2>
         <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -28,5 +29,8 @@
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
+
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

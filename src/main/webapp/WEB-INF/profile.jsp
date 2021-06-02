@@ -5,8 +5,8 @@
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
 </head>
-
-<%--<% //In case, if user session is not set, redirect to Login page--%>
+<%-- // can do if/else logic in the jsp or in the servlet --%>
+<%--<% // if user session is not set which means user hasn't logged in, redirect to Login page--%>
 <%--    if ((request.getSession().getAttribute("user") == null))--%>
 <%--    { %>--%>
 <%--        <jsp:forward page="/WEB-INF/login.jsp"></jsp:forward>--%>
@@ -16,6 +16,7 @@
 
     <div class="container">
         <h1>Viewing your profile.</h1>
+        <p>${message}</p>
     </div>
 
 </body>
