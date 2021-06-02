@@ -5,6 +5,13 @@
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
 </head>
+
+<% //In case, if user session equals admin, redirect to profile page
+    if ((request.getSession().getAttribute("user") == "admin"))
+    { %>
+        <jsp:forward page="/WEB-INF/profile.jsp"></jsp:forward>
+<%  } %>
+
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">

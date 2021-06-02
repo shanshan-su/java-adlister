@@ -5,6 +5,12 @@
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
 </head>
+
+<%--<% //In case, if user session is not set, redirect to Login page--%>
+<%--    if ((request.getSession().getAttribute("user") == null))--%>
+<%--    { %>--%>
+<%--        <jsp:forward page="/WEB-INF/login.jsp"></jsp:forward>--%>
+<%--<%  } %>--%>
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
