@@ -1,8 +1,6 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
-import com.codeup.adlister.dao.Config;
-import com.codeup.adlister.dao.MySQLUsersDao;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -16,7 +14,7 @@ import java.io.IOException;
 public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO: show the registration form
-        request.getRequestDispatcher("/WEB-INF/ads/register.jsp")
+        request.getRequestDispatcher("/WEB-INF/register.jsp")
                 .forward(request, response);
     }
 
